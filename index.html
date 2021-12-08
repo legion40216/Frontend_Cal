@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+
+  <style>
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+font-size: 35px;
+}
+
+body{
+
+}
+
+.main{
+
+}
+
+h1{
+  color: white;
+}
+
+    .container{
+      display:flex;
+      justify-content: center;
+      align-items: center;
+min-height: 100vh;
+flex-flow: column;
+background-color: hsl(222, 26%, 31%);
+
+
+
+    }
+
+.keyboard{
+  background-color:hsl(223,31%,20%);
+  display: flex;
+  flex-flow: column;
+padding: 20px 30px;
+border-radius: 10px;
+
+}
+
+
+
+
+.first
+{
+    display: flex;
+gap: 20px;
+
+}
+
+.first >*{
+background: hsl(30,25%,89%);
+margin:  10px 0;
+  padding: 8px 15px;
+border: none;
+  flex: 1;
+      box-shadow: 0 .2rem hsl(28,16%,65%);
+      border-radius: 10px;
+
+}
+
+
+input[type=text]
+{
+  width: 100%;
+  padding: 15px;
+  background:hsl(224, 36%, 15%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+button
+{
+    color: hsl(221, 14%, 31%);
+  cursor: pointer;
+}
+
+button:active {
+
+  transform: translateY(5px);
+}
+
+.textbox{
+padding: 15px 0px;
+}
+
+.del {
+background:hsl(225,21%,49%);
+box-shadow: 0 .2rem hsl(224,28%,35%) !important;
+color:white;
+}
+
+.reset
+{
+  color:white;
+  background:hsl(225,21%,49%);
+  box-shadow: 0 .2rem hsl(224,28%,35%) !important;
+
+}
+
+.equal{
+background:hsl(6,63%,50%);
+box-shadow: 0 .2rem hsl(6,70%,34%)!important;
+color:white;
+}
+  </style>
+</head>
+<body>
+
+
+<div class="main">
+<div class="container">
+
+  <div class="cal">
+    <h1>cal</h1>
+    <div class="textbox">
+      <input  type="text" name="" value="" id="text">
+    </div>
+    <div class="keyboard">
+
+      <div id="one" class="first">
+        <button type="button" name="button" onclick="insert('7')" >7</button>
+        <button type="button" name="button"  onclick="insert('8')">8</button>
+        <button type="button" name="button"  onclick="insert('9')">9</button>
+        <button  class= "del" type="button"   name="button">del</button>
+      </div>
+
+      <div id="second" class="first">
+        <button type="button" name="button"  onclick="insert('4')">4</button>
+        <button type="button" name="button"  onclick="insert('5')">5</button>
+        <button type="button" name="button"  onclick="insert('6')">6</button>
+        <button type="button" name="button"  onclick="insert('+')">+</button>
+      </div>
+
+      <div id="third" class="first">
+        <button type="button" name="button"  onclick="insert('1')">1</button>
+        <button type="button" name="button"  onclick="insert('2')">2</button>
+        <button type="button" name="button"  onclick="insert('3')">3</button>
+        <button type="button" name="button"  onclick="insert('-')">-</button>
+      </div>
+
+      <div id="four" class="first">
+        <button type="button" name="button" >.</button>
+        <button type="button" name="button" onclick="insert('0')">0</button>
+        <button type="button" name="button" onclick="insert('/')">/</button>
+        <button type="button" name="button" onclick="insert('*')">*</button>
+      </div>
+
+
+
+        <div id="5" class="first">
+          <button class ="reset" type="button" name="button">Reset</button>
+          <button  class=" equal " type="button" name="button" onclick="ans()">=</button>
+       </div>
+    </div>
+
+
+  </div>
+
+  </div>
+
+</div>
+
+
+
+<script src="cal.js" charset="utf-8"></script>
+</body>
+</html>
