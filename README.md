@@ -1,4 +1,4 @@
-# Frontend_Cal
+# Frontend_Calculator
 Calculator App
 
 Technologies used:
